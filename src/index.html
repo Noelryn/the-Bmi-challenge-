@@ -56,13 +56,13 @@
         });
 
         const calculateBMI = () => {
-            let method = global.methodSelector.options[global.methodSelector.selectdIndex].value
+            let method = global.methodSelector.options[global.methodSelector.selectedIndex].value
             return new Promise(resolve => {
-                let weightFromat = method === 'metric' ? 'weight-in-kgs': 'weight-in-lbs'
-                let heightFromat = method === 'metric' ? 'height-in-cm': 'height-in-in'
+                let weightFormat = method === 'metric' ? 'weight-in-kgs': 'weight-in-lbs'
+                let heightFormat = method === 'metric' ? 'height-in-cm': 'height-in-in'
 
-                let w = parseFloat(document.getElementById(weightFromat).value);
-                let h = parseFloat(document.getElementById(heightFromat).value);
+                let w = parseFloat(document.getElementById(weightFormat).value);
+                let h = parseFloat(document.getElementById(heightFormat).value);
                 let person = new person ({
                     weight: w,
                     height: h,
